@@ -1,0 +1,258 @@
+[
+{
+  "model": "citas.usuarios",
+  "pk": 2,
+  "fields": {
+    "nombres": "María",
+    "apellidos": "Gómez",
+    "correo": "maria.gomez@test.com",
+    "contrasena": "abc123",
+    "numero_telefono": "3001234567",
+    "fecha_nacimiento": "1995-04-12"
+  }
+},
+{
+  "model": "citas.usuarios",
+  "pk": 3,
+  "fields": {
+    "nombres": "Carlos",
+    "apellidos": "Pérez",
+    "correo": "carlos.perez@test.com",
+    "contrasena": "xyz789",
+    "numero_telefono": "3009876543",
+    "fecha_nacimiento": "1998-08-20"
+  }
+},
+{
+  "model": "citas.usuarios",
+  "pk": 4,
+  "fields": {
+    "nombres": "Laura",
+    "apellidos": "Martínez",
+    "correo": "laura.martinez@test.com",
+    "contrasena": "pass456",
+    "numero_telefono": "3115556677",
+    "fecha_nacimiento": "2000-01-15"
+  }
+},
+{
+  "model": "citas.usuarios",
+  "pk": 5,
+  "fields": {
+    "nombres": "Sofía",
+    "apellidos": "Ramírez",
+    "correo": "sofia.ramirez@test.com",
+    "contrasena": "test123",
+    "numero_telefono": "3204445566",
+    "fecha_nacimiento": "1997-11-03"
+  }
+},
+{
+  "model": "citas.servicios",
+  "pk": 2,
+  "fields": {
+    "nombre": "Manicure",
+    "descripcion": "Manicure clásica con esmaltado",
+    "costo": "25000.00",
+    "estado": "activo"
+  }
+},
+{
+  "model": "citas.servicios",
+  "pk": 3,
+  "fields": {
+    "nombre": "Pedicure",
+    "descripcion": "Pedicure spa con exfoliación e hidratación y ",
+    "costo": "30000.00",
+    "estado": "activo"
+  }
+},
+{
+  "model": "citas.servicios",
+  "pk": 4,
+  "fields": {
+    "nombre": "Diseño de cejas",
+    "descripcion": "Diseño y perfilado de cejas con pinza y cera ",
+    "costo": "18000.00",
+    "estado": "activo"
+  }
+},
+{
+  "model": "citas.servicios",
+  "pk": 5,
+  "fields": {
+    "nombre": "Uñas acrílicas",
+    "descripcion": "Aplicación de uñas acrílicas con esmaltado semipermanente",
+    "costo": "45000.00",
+    "estado": "activo"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 17,
+  "fields": {
+    "usuario": 4,
+    "servicio": 2,
+    "fecha": "2026-07-15",
+    "hora": "08:00:00",
+    "especialista": "Gabriela Méndez",
+    "estado": "pendiente"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 18,
+  "fields": {
+    "usuario": 3,
+    "servicio": 3,
+    "fecha": "2026-07-14",
+    "hora": "10:15:00",
+    "especialista": "Ana López",
+    "estado": "cancelada"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 19,
+  "fields": {
+    "usuario": 5,
+    "servicio": 5,
+    "fecha": "2026-07-16",
+    "hora": "11:00:00",
+    "especialista": "Angela Páez",
+    "estado": "pendiente"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 20,
+  "fields": {
+    "usuario": 5,
+    "servicio": 4,
+    "fecha": "2026-07-14",
+    "hora": "12:45:00",
+    "especialista": "Daniela Ruiz",
+    "estado": "completado"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 21,
+  "fields": {
+    "usuario": 3,
+    "servicio": 3,
+    "fecha": "2026-07-30",
+    "hora": "08:45:00",
+    "especialista": "Camila Torres",
+    "estado": "completado"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 22,
+  "fields": {
+    "usuario": 4,
+    "servicio": 2,
+    "fecha": "2026-08-01",
+    "hora": "16:45:00",
+    "especialista": "Valentina Gómez",
+    "estado": "confirmada"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 23,
+  "fields": {
+    "usuario": 2,
+    "servicio": 2,
+    "fecha": "2026-07-05",
+    "hora": "14:45:00",
+    "especialista": "Andrea Ríos",
+    "estado": "cancelada"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 25,
+  "fields": {
+    "usuario": 5,
+    "servicio": 2,
+    "fecha": "2026-07-29",
+    "hora": "15:45:00",
+    "especialista": "Valentina Gómez",
+    "estado": "completado"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 26,
+  "fields": {
+    "usuario": 4,
+    "servicio": 4,
+    "fecha": "2026-07-27",
+    "hora": "13:45:00",
+    "especialista": "Camila Torres",
+    "estado": "pendiente"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 27,
+  "fields": {
+    "usuario": 3,
+    "servicio": 4,
+    "fecha": "2026-07-05",
+    "hora": "09:15:00",
+    "especialista": "Camila Torres",
+    "estado": "cancelada"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 28,
+  "fields": {
+    "usuario": 3,
+    "servicio": 5,
+    "fecha": "2026-07-15",
+    "hora": "16:00:00",
+    "especialista": "Valentina Gómez",
+    "estado": "confirmada"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 29,
+  "fields": {
+    "usuario": 3,
+    "servicio": 3,
+    "fecha": "2026-07-26",
+    "hora": "10:30:00",
+    "especialista": "Camila Torres",
+    "estado": "completado"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 30,
+  "fields": {
+    "usuario": 4,
+    "servicio": 4,
+    "fecha": "2026-07-30",
+    "hora": "15:00:00",
+    "especialista": "María Agamez",
+    "estado": "pendiente"
+  }
+},
+{
+  "model": "citas.citas",
+  "pk": 31,
+  "fields": {
+    "usuario": 2,
+    "servicio": 4,
+    "fecha": "2026-07-27",
+    "hora": "09:15:00",
+    "especialista": "Daniela Ruiz",
+    "estado": "cancelada"
+  }
+}
+]
