@@ -1,0 +1,25 @@
+{% extends "citas/base.html" %}
+
+{% block contenido %}
+
+<div class="tarjeta-confirmacion">
+    <h2>Eliminar cita</h2>
+
+    <p>¿Seguro que quieres eliminar esta cita?</p>
+
+    <ul>
+        <li><strong>Usuario: </strong>{{ cita.usuario }}</li>
+        <li><strong>Servicio: </strong>{{ cita.servicio }}</li>
+        <li><strong>Fecha: </strong>{{ cita.fecha }}</li>
+        <li><strong>Hora: </strong>{{ cita.hora }}</li>
+        <li><strong>Especialista: </strong>{{ cita.especialista }}</li>
+    </ul>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-eliminar">Sí, eliminar</button>
+        <a href="{% url 'citas:lista' %}" class="btn">Cancelar</a>
+    </form>
+</div>
+
+{% endblock %}

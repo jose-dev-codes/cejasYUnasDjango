@@ -1,0 +1,19 @@
+{% extends "citas/base.html" %}
+
+{% block contenido %}
+
+<h2>{{ titulo }}</h2>
+
+<form method="POST" action="" novalidate>
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    {% if titulo == "Editar cita" %}
+        <button type="submit" class="btn btn-editar">Guardar</button>
+    {% else %}
+        <button type="submit" class="btn btn-crear">Guardar</button>
+    {% endif %}
+</form>
+
+{% endblock %}

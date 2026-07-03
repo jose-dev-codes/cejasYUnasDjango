@@ -1,0 +1,330 @@
+/* ==========================================
+    VARIABLES DE COLOR
+========================================== */
+
+:root {
+    --rosa-fondo: #fce3ee;
+    --rosa-principal: #e42bb8;
+    --rosa-oscuro: #d922ac;
+    --verde: #1a7a42;
+    --verde-claro: #d4f5e2;
+    --rojo: #c0392b;
+    --blanco: #ffffff;
+    --gris-texto: #333333;
+}
+
+/* ==========================================
+    RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+    BODY
+========================================== */
+
+body {
+    background-color: var(--rosa-fondo);
+    color: var(--gris-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 30px;
+}
+
+/* ==========================================
+    HEADER
+========================================== */
+
+.header-app {
+    background-color: var(--rosa-principal);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.titulo-app {
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: var(--blanco);
+    margin: 0;
+}
+
+/* ==========================================
+    TÍTULOS
+========================================== */
+
+h1 {
+    color: var(--rosa-principal);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--rosa-principal);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+/* ==========================================
+    TABLAS
+========================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: var(--rosa-principal);
+}
+
+thead th {
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.acciones-lista {
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+    PAGINACIÓN
+========================================== */
+
+nav {
+    margin-top: 20px;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination li {
+    background-color: var(--blanco);
+    border: 1px solid var(--rosa-oscuro);
+    border-radius: 6px;
+    padding: 8px 14px;
+}
+
+.pagination a {
+    color: var(--rosa-principal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ==========================================
+    FORMULARIOS
+========================================== */
+
+form {
+    background-color: var(--blanco);
+    padding: 32px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--gris-texto);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid var(--rosa-oscuro);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* ==========================================
+    BOTONES
+========================================== */
+
+button,
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--blanco);
+    background-color: var(--rosa-principal);
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover,
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Crear / Agendar */
+.btn-crear {
+    background-color: var(--verde-claro);
+    color: var(--verde);
+    border: 1px solid var(--verde);
+}
+
+/* Editar / Guardar cambios */
+.btn-editar {
+    background-color: var(--rosa-principal);
+    color: var(--blanco);
+    border: 1px solid var(--rosa-principal);
+}
+
+/* Eliminar / Cancelar */
+.btn-eliminar {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: 1px solid var(--rojo);
+}
+
+/* ==========================================
+    TARJETA DE CONFIRMACIÓN
+========================================== */
+
+.tarjeta-confirmacion {
+    background-color: var(--blanco);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 8px;
+    border-left: 5px solid var(--rojo);
+}
+
+.tarjeta-confirmacion h2 {
+    color: var(--rojo);
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.tarjeta-confirmacion p {
+    margin-bottom: 16px;
+}
+
+.tarjeta-confirmacion ul {
+    list-style: none;
+    background-color: var(--rosa-fondo);
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.tarjeta-confirmacion li {
+    margin-bottom: 8px;
+}
+
+.tarjeta-confirmacion li:last-child {
+    margin-bottom: 0;
+}
+
+.tarjeta-confirmacion form {
+    background-color: transparent;
+    padding: 0;
+    max-width: none;
+    display: flex;
+    gap: 12px;
+}
+
+/* ==========================================
+    ERRORES DE FORMULARIO
+========================================== */
+
+.errorlist {
+    list-style: none;
+    background-color: #fdecea;
+    border-left: 4px solid var(--rojo);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+}
+
+.errorlist li {
+    color: var(--rojo);
+    font-size: 0.95rem;
+}
+
+.errorlist li:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.campo-error input,
+.campo-error select,
+.campo-error textarea {
+    border-color: var(--rojo);
+    border-width: 2px;
+}
+
+/* ==========================================
+    RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+    body {
+        margin: 16px;
+    }
+
+    .tabla-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    td .btn {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    td .btn:last-child {
+        margin-bottom: 0;
+    }
+
+    form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .tarjeta-confirmacion form {
+        flex-direction: column;
+    }
+
+    .tarjeta-confirmacion .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

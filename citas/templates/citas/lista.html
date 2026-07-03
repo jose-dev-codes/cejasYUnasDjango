@@ -1,0 +1,67 @@
+{% extends "citas/base.html" %}
+
+{% block contenido %}
+
+<h2>Lista de citas</h2>
+
+<p class="acciones-lista">
+    <a href="{% url 'citas:crear' %}" class="btn btn-crear">Nueva cita</a>
+</p>
+
+<div class="tabla-scroll">
+
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Servicio</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Especialista</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for cita in citas %}
+            <tr>
+                <td>{{cita.id}}</td>
+                <td>{{cita.usuario}}</td>
+                <td>{{cita.servicio}}</td>
+                <td>{{cita.fecha}}</td>
+                <td>{{cita.hora}}</td>
+                <td>{{cita.especialista}}</td>
+                <td>{{cita.estado}}</td>
+                <td>
+                    <a href="{% url 'citas:editar' cita.pk %}" class="btn btn-editar">Editar</a>
+                    <a href="{% url 'citas:eliminar' cita.pk %}" class="btn btn-eliminar">Eliminar</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8">No hay citas registradas.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% if citas.paginator.num_pages > 1 %}
+<nav>
+    <ul class="pagination">
+        {% if citas.has_previous %}
+            <li><a href="?page={{ citas.previous_page_number }}">« Anterior</a></li>
+        {% endif %}
+
+        <li>Página {{ citas.number }} de {{ citas.paginator.num_pages }}</li>
+
+        {% if citas.has_next %}
+            <li><a href="?page={{ citas.next_page_number }}">Siguiente »</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
+{% endblock %}
